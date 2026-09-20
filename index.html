@@ -3,19 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Última Oportunidade - Finalização</title>
+    <title>Sua Última Oportunidade</title>
     
-    <!-- Otimizações de Carregamento do Vturb -->
-    <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
-    <link rel="preload" href="https://scripts.converteai.net/56395304-8ed5-4152-a7b6-834a3488e490/players/6aaf36fb9dfa48d5c4e51573/v4/player.js" as="script">
-    <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
-    <link rel="preload" href="https://cdn.converteai.net/56395304-8ed5-4152-a7b6-834a3488e490/6aaf36e77ed18b2eee0c80d7/main.m3u8" as="fetch">
-    <link rel="dns-prefetch" href="https://cdn.converteai.net">
-    <link rel="dns-prefetch" href="https://scripts.converteai.net">
-    <link rel="dns-prefetch" href="https://images.converteai.net">
-    <link rel="dns-prefetch" href="https://license.vturb.com">
-    
-    <!-- Fonte Montserrat -->
+    <!-- Fonte Montserrat (Mesma da imagem original) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -33,224 +23,163 @@
             background-color: #ffffff;
             color: #333333;
             text-align: center;
+            padding: 30px 20px;
         }
 
-        /* Barra de Progresso no Topo */
-        .progress-bar-container {
-            width: 100%;
-            background-color: #f0f0f0;
-            height: 8px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 100;
-        }
-
-        .progress-bar {
-            width: 95%; /* Progresso maior na página de downsell */
-            background-color: #1a7a3e;
-            height: 100%;
-        }
-
-        /* Container Principal */
+        /* Container Principal (Otimizado para Mobile) */
         .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 40px 20px;
-            margin-top: 20px;
         }
 
-        /* Alerta de "Espere" (Vermelho para chamar atenção no downsell) */
+        /* Alerta de "Não feche a página" */
         .alert-notice {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
-            color: #d14848; /* Cor vermelha para alerta */
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            margin-bottom: 20px;
+            color: #999999;
+            font-size: 12px;
+            font-weight: 500;
+            margin-bottom: 25px;
             text-transform: uppercase;
         }
 
         .alert-notice svg {
-            width: 20px;
-            height: 20px;
-            fill: #d14848;
+            width: 18px;
+            height: 18px;
+            fill: #d4a373; /* Cor amarelo/mostarda do relógio */
         }
 
-        /* Títulos */
+        /* Headline */
         h1 {
             font-size: 28px;
             font-weight: 800;
-            line-height: 1.3;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             color: #222222;
+            text-transform: uppercase;
         }
 
-        h1 .highlight {
-            color: #d14848; /* Vermelho escuro/alerta */
-            display: block;
+        h1 .red-text {
+            color: #cc0000; /* Vermelho exato da palavra ÚLTIMA */
         }
 
+        /* Subheadline */
         .subheadline {
-            font-size: 16px;
-            color: #555555;
-            font-weight: 500;
+            font-size: 15px;
+            color: #777777;
+            font-weight: 400;
             margin-bottom: 35px;
+            line-height: 1.5;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        /* Container do Vídeo Vturb */
-        .vturb-container {
-            margin-bottom: 30px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-            max-width: 400px;
-            margin-left: auto;
-            margin-right: auto;
+        /* Lista de Benefícios */
+        .benefits-title {
+            color: #2e9b57; /* Verde do subtítulo */
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 10px;
         }
 
-        /* Bloco de Quebra de Preço Promocional */
-        .price-breakdown {
-            background-color: #fffaf0;
-            border: 2px dashed #d14848;
-            border-radius: 8px;
-            padding: 25px 20px;
-            max-width: 500px;
+        .benefits-list {
+            list-style: none;
+            color: #777777;
+            font-size: 15px;
+            font-weight: 400;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        /* Preços */
+        .prices-container {
+            margin-bottom: 30px;
+        }
+
+        .price-old {
+            color: #cc0000;
+            text-decoration: line-through;
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .price-new {
+            color: #2e9b57;
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 25px;
+        }
+
+        /* Nota de Rodapé (P.S.) */
+        .ps-text {
+            font-size: 12px;
+            color: #999999;
+            line-height: 1.5;
+            max-width: 800px;
             margin: 0 auto 40px auto;
         }
 
-        .price-breakdown h3 {
-            font-size: 18px;
-            color: #222;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .price-row {
-            font-size: 15px;
-            color: #666;
-            margin-bottom: 8px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-
-        .strike-price {
-            text-decoration: line-through;
-            color: #999;
-            font-weight: 600;
-        }
-
-        .final-offer-box {
-            background-color: #d14848;
-            color: #fff;
-            padding: 15px;
-            border-radius: 6px;
+        /* Área do Hotmart Funnel */
+        #hotmart-sales-funnel {
             margin-top: 20px;
+            width: 100%;
         }
 
-        .final-offer-box p {
-            font-size: 14px;
-            margin-bottom: 5px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .final-offer-box .big-price {
-            font-size: 38px;
-            font-weight: 800;
-            line-height: 1;
-        }
-
-        /* Responsividade */
-        @media (max-width: 600px) {
+        /* Responsividade Extra para Celular */
+        @media (max-width: 480px) {
             h1 { font-size: 24px; }
             .subheadline { font-size: 14px; }
-            .price-row { padding: 0 5px; font-size: 14px; }
+            .benefits-list { font-size: 14px; }
+            .price-old { font-size: 20px; }
+            .price-new { font-size: 24px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Barra de Progresso Fixa -->
-    <div class="progress-bar-container">
-        <div class="progress-bar"></div>
-    </div>
-
     <div class="container">
         
-        <!-- Alerta Topo (Downsell) -->
+        <!-- Alerta Topo -->
         <div class="alert-notice">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm-8-320v128c0 4.4 3.6 8 8 8h16c4.4 0 8-3.6 8-8V136c0-4.4-3.6-8-8-8h-16c-4.4 0-8 3.6-8 8zm16 208c-13.3 0-24 10.7-24 24s10.7 24 24 24 24-10.7 24-24-10.7-24-24-24z"/>
+                <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/>
             </svg>
-            ESPERE! NÃO FECHE A PÁGINA AINDA!
+            NÃO FECHE A PÁGINA: COMPRA EM PROCESSAMENTO!
         </div>
 
-        <!-- Headline Principal -->
+        <!-- Headline -->
         <h1>
-            Eu entendo... o valor de R$ 97,00 pode ter ficado pesado, mas eu tenho uma 
-            <span class="highlight">última oportunidade inédita.</span>
+            SUA <span class="red-text">ÚLTIMA</span> OPORTUNIDADE!
         </h1>
         
         <!-- Subheadline -->
         <p class="subheadline">
-            Assista ao vídeo curto abaixo agora. Esta é a sua última chance de ter o Ritual Feito Por Mim com uma condição que não se repetirá.
+            Para que você não perca esta oportunidade, você foi selecionada para obter um desconto adicional de 50% no Ritual da Chama Eterna - Feito por Valentina.
         </p>
 
-        <!-- ========================================== -->
-        <!-- ÁREA DO VÍDEO (VTURB)                      -->
-        <!-- ========================================== -->
-        <div class="vturb-container">
-            <!-- ATENÇÃO: Se o vídeo de downsell for diferente, troque o ID no código abaixo -->
-            <vturb-smartplayer id="vid-6aaf36fb9dfa48d5c4e51573" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;">
-                <div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 177.77777777777777% 0 0; z-index: 0; background-color: black;"></div>
-            </vturb-smartplayer> 
-            <script type="text/javascript"> 
-                var s=document.createElement("script"); 
-                s.src="https://scripts.converteai.net/56395304-8ed5-4152-a7b6-834a3488e490/players/6aaf36fb9dfa48d5c4e51573/v4/player.js", 
-                s.async=!0,
-                document.head.appendChild(s); 
-            </script>
+        <!-- Lista do que a pessoa vai receber -->
+        <div class="benefits-title">Você vai receber tudo:</div>
+        <ul class="benefits-list">
+            <li>O Ritual da Chama Eterna - Feito Por Valentina +</li>
+            <li>O Código da Reconquista +</li>
+            <li>O presente Secreto</li>
+        </ul>
+
+        <!-- Quebra de Preços -->
+        <div class="prices-container">
+            <div class="price-old">R$ 997,00</div>
+            <div class="price-old">R$ 97,00</div>
+            <div class="price-new">R$ 47,00</div>
         </div>
-        <!-- ========================================== -->
 
-        <!-- ========================================== -->
-        <!-- BLOCO DE PREÇO (CRIADO PARA O DOWNSELL)    -->
-        <!-- ========================================== -->
-        <div class="price-breakdown">
-            <h3>Veja o que eu fiz por você:</h3>
-            
-            <div class="price-row">
-                <span>Valor Normal do Ritual:</span>
-                <span class="strike-price">R$ 997,00</span>
-            </div>
-            
-            <div class="price-row">
-                <span>Oferta da página anterior:</span>
-                <span class="strike-price">R$ 97,00</span>
-            </div>
+        <!-- P.S. (Post Scriptum) -->
+        <p class="ps-text">
+            P.S.: Esta é uma oportunidade única e exclusiva válida somente agora nesta página, e sob nenhuma circunstância abriremos esta condição em outro momento para você.
+        </p>
 
-            <div class="final-offer-box">
-                <p>Somente agora, nesta página:</p>
-                <div class="big-price">R$ 47,00</div>
-            </div>
-        </div>
-        <!-- ========================================== -->
-
-
-        <!-- ========================================== -->
-        <!-- ÁREA DO WIDGET DE UPSELL/DOWNSELL (HOTMART)-->
-        <!-- ========================================== -->
-        
         <!-- HOTMART - Sales Funnel Widget -->
         <!--- sales funnel container --->
         <div id="hotmart-sales-funnel"></div>
@@ -258,12 +187,11 @@
         <!--- script load and setup --->
         <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
         <script>
-        checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+            checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
         </script>
         <!-- HOTMART - Sales Funnel Widget -->
-        
-        <!-- ========================================== -->
 
     </div>
+
 </body>
 </html>
